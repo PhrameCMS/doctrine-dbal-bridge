@@ -1,0 +1,60 @@
+{
+  "name": "phramecms/doctrine-dbal-bridge",
+  "description": "Doctrine DBAL bridge for PhrameCMS Core",
+  "version": "dev-main",
+  "type": "library",
+  "license": "GPL-3.0-only",
+  "require": {
+    "php": "^8.2",
+    "doctrine/dbal": "^4.0",
+    "phramecms/core": "dev-main"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../Core",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/PhrameCMS/dependency-injection-bridge"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/PhrameCMS/dotenv-bridge"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/PhrameCMS/http-foundation-bridge"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/PhrameCMS/routing-bridge"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/PhrameCMS/twig-bridge"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PhrameCMS\\DoctrineDbalBridge\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PhrameCMS\\DoctrineDbalBridge\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.5",
+    "phpstan/phpstan": "^2.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
